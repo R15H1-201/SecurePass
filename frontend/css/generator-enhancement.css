@@ -1,0 +1,302 @@
+/* SecurePass Design System 2.0 | Step 3: Password Generator */
+#generator-page .two-column {
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+    gap: 18px;
+}
+
+#generator-page .panel {
+    border-color: rgba(255,255,255,.11);
+    background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.028));
+}
+
+#generator-page .panel-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+#generator-page .panel-heading h3 {
+    margin: 0 0 6px;
+    color: var(--sp-white);
+    font-size: 16px;
+    letter-spacing: -.025em;
+}
+
+#generator-page .panel-heading p {
+    margin: 0;
+    color: var(--sp-muted);
+    font-size: 11px;
+}
+
+#generator-page .panel-symbol {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    border: 1px solid rgba(110,231,183,.16);
+    border-radius: 11px;
+    color: var(--sp-mint);
+    background: rgba(16,185,129,.08);
+}
+
+#generator-page .field-heading {
+    margin-bottom: 10px;
+}
+
+#generator-page #lengthValue {
+    min-width: 34px;
+    padding: 3px 8px;
+    border: 1px solid rgba(110,231,183,.2);
+    border-radius: 8px;
+    color: var(--sp-mint);
+    background: rgba(16,185,129,.08);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#generator-page .range-input {
+    height: 6px;
+    margin: 8px 0 3px;
+    accent-color: var(--sp-emerald);
+}
+
+#generator-page .range-labels {
+    display: flex;
+    justify-content: space-between;
+    color: var(--sp-subtle);
+    font-size: 10px;
+}
+
+#generator-page .options-title {
+    margin: 24px 0 5px;
+    color: var(--sp-text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#generator-page .option-row {
+    justify-content: space-between;
+    min-height: 48px;
+    margin: 0;
+    padding: 10px 2px;
+    border-bottom-color: rgba(255,255,255,.065);
+}
+
+#generator-page .option-row > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #C2D0C8;
+    font-size: 11px;
+}
+
+#generator-page .option-row input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    accent-color: var(--sp-emerald);
+}
+
+#generator-page .option-row small {
+    color: #73847A;
+    font-family: var(--sp-mono);
+    font-size: 10px;
+}
+
+#generator-page .field-error {
+    min-height: 18px;
+    margin: 10px 0 5px;
+    color: var(--sp-danger);
+    font-size: 11px;
+}
+
+#generator-page .btn-block {
+    width: 100%;
+}
+
+#generator-page .result-panel {
+    min-width: 0;
+    padding: 23px;
+}
+
+#generator-page .result-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+#generator-page .result-lock {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(110,231,183,.17);
+    border-radius: 12px;
+    color: var(--sp-mint);
+    background: rgba(16,185,129,.08);
+    font-size: 16px;
+}
+
+#generator-page .privacy-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 10px;
+    border: 1px solid rgba(16,185,129,.18);
+    border-radius: 999px;
+    color: #A8C8B7;
+    background: rgba(16,185,129,.055);
+    font-size: 10px;
+}
+
+#generator-page .result-panel h3 {
+    margin: 0 0 7px;
+    color: var(--sp-white);
+    font-size: 16px;
+}
+
+#generator-page .result-panel > .muted {
+    margin-bottom: 18px;
+    font-size: 11px;
+}
+
+#generator-page .password-output {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+    min-height: 62px;
+    padding: 9px;
+    border-color: rgba(110,231,183,.2);
+    border-radius: 14px;
+    background: rgba(3,15,10,.58);
+}
+
+#generator-page #generatedPassword {
+    min-width: 0;
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 7px;
+    border: 0;
+    color: var(--sp-mint);
+    background: transparent;
+    box-shadow: none;
+    font-family: var(--sp-mono);
+    font-size: 12px;
+    letter-spacing: .025em;
+}
+
+#generator-page #generatedPassword:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#generator-page .password-output .icon-button {
+    width: auto;
+    min-width: 48px;
+    height: 36px;
+    min-height: 36px;
+    padding: 0 9px;
+    border-radius: 9px;
+    color: #B8C9BF;
+    font-size: 10px;
+}
+
+#generator-page .password-output .copy-icon {
+    color: var(--sp-mint);
+    border-color: rgba(16,185,129,.2);
+    background: rgba(16,185,129,.08);
+}
+
+#generator-page .strength-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 23px 0 10px;
+    color: var(--sp-muted);
+    font-size: 11px;
+}
+
+#generator-page #generatedStrength {
+    color: var(--sp-mint);
+    font-size: 11px;
+    font-weight: 750;
+    font-variant-numeric: tabular-nums;
+}
+
+#generator-page .strength-track {
+    height: 9px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.065);
+    border-radius: 999px;
+    background: rgba(255,255,255,.085);
+}
+
+#generator-page #generatedStrengthBar {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    box-shadow: 0 0 14px rgba(16,185,129,.22);
+    transition: width 500ms cubic-bezier(.2,.7,.2,1), background-color 250ms ease;
+}
+
+#generator-page .result-note {
+    min-height: 40px;
+    margin: 10px 0 19px;
+    color: #87988E;
+    font-size: 10px;
+    line-height: 1.65;
+}
+
+#generator-page .result-actions {
+    margin-top: 8px;
+}
+
+#generator-page .disclaimer {
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.07);
+    color: #718078;
+    font-size: 10px;
+    line-height: 1.65;
+}
+
+@media (max-width: 800px) {
+    #generator-page .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    #generator-page .result-panel {
+        padding: 18px;
+    }
+
+    #generator-page .password-output {
+        gap: 4px;
+        padding: 7px;
+    }
+
+    #generator-page #generatedPassword {
+        font-size: 11px;
+    }
+
+    #generator-page .password-output .icon-button {
+        min-width: 42px;
+        padding-inline: 6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #generator-page #generatedStrengthBar {
+        transition: none;
+    }
+}

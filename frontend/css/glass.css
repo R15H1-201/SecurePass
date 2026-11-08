@@ -1,0 +1,7 @@
+/* Reusable pure-glass surfaces */
+.glass,.glass-panel,.glass-card{border:1px solid var(--sp-border);background:rgba(255,255,255,.055);box-shadow:0 18px 55px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.045);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%)}
+.glass-soft{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.085);backdrop-filter:blur(16px)}
+.glass-strong{background:rgba(17,25,22,.82);border:1px solid var(--sp-border-strong);backdrop-filter:blur(28px)}
+.emerald-text{color:var(--sp-mint)}.emerald-glow{box-shadow:0 0 28px rgba(16,185,129,.17)}
+.eyebrow{color:var(--sp-mint);font-size:10px;font-weight:750;letter-spacing:.15em;text-transform:uppercase}
+.divider{height:1px;border:0;background:linear-gradient(90deg,transparent,var(--sp-border),transparent)}

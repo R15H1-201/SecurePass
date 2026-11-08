@@ -1,0 +1,155 @@
+/* SecurePass Design System 2.0 | Step 4: Security Insights */
+
+#insights-page .page-intro {
+    position: relative;
+    margin-bottom: 28px;
+    padding: 4px 0 20px;
+    border-bottom: 1px solid rgba(255,255,255,.075);
+}
+
+#insights-page .page-intro h2 {
+    margin: 7px 0 9px;
+    font-size: clamp(1.8rem, 3vw, 2.35rem);
+    letter-spacing: -.055em;
+}
+
+#insights-page .page-intro > p:last-child {
+    max-width: 610px;
+    color: #9BAAA2;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+#insights-page .insight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+#insights-page .tool-card {
+    position: relative;
+    min-height: 190px;
+    padding: 24px 24px 22px;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid rgba(255,255,255,.105);
+    border-radius: 19px;
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.022)),
+        rgba(17,25,22,.54);
+    box-shadow: 0 14px 38px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.035);
+    transition: transform 240ms cubic-bezier(.2,.7,.2,1),
+                border-color 240ms ease, background 240ms ease,
+                box-shadow 240ms ease;
+}
+
+#insights-page .tool-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 150px;
+    height: 150px;
+    top: -92px;
+    right: -72px;
+    border: 1px solid rgba(110,231,183,.13);
+    border-radius: 50%;
+    box-shadow: 0 0 0 18px rgba(16,185,129,.025),
+                0 0 0 38px rgba(16,185,129,.018);
+    pointer-events: none;
+}
+
+#insights-page .tool-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(110,231,183,.28);
+    background:
+        linear-gradient(145deg, rgba(16,185,129,.085), rgba(255,255,255,.025)),
+        rgba(17,25,22,.68);
+    box-shadow: 0 20px 45px rgba(0,0,0,.22), 0 0 24px rgba(16,185,129,.055);
+}
+
+#insights-page .tool-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    font-family: var(--sp-mono);
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: .04em;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.07);
+}
+
+#insights-page .tool-icon.purple {
+    color: #C4B5FD;
+    border-color: rgba(196,181,253,.19);
+    background: linear-gradient(145deg, rgba(139,92,246,.18), rgba(139,92,246,.055));
+}
+
+#insights-page .tool-icon.blue {
+    color: #93C5FD;
+    border-color: rgba(147,197,253,.19);
+    background: linear-gradient(145deg, rgba(59,130,246,.17), rgba(59,130,246,.05));
+}
+
+#insights-page .tool-icon.green {
+    color: var(--sp-mint);
+    border-color: rgba(110,231,183,.19);
+    background: linear-gradient(145deg, rgba(16,185,129,.17), rgba(16,185,129,.05));
+}
+
+#insights-page .tool-card h3 {
+    margin: 17px 0 9px;
+    color: #F1F7F3;
+    font-size: 15px;
+    font-weight: 680;
+    letter-spacing: -.025em;
+}
+
+#insights-page .tool-card p {
+    max-width: 520px;
+    margin: 0;
+    color: #9BAAA2;
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+@media (min-width: 1200px) {
+    #insights-page .insight-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    #insights-page .tool-card {
+        min-height: 205px;
+    }
+}
+
+@media (max-width: 800px) {
+    #insights-page .insight-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 580px) {
+    #insights-page .page-intro {
+        margin-bottom: 20px;
+        padding-bottom: 17px;
+    }
+    #insights-page .insight-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    #insights-page .tool-card {
+        min-height: 0;
+        padding: 20px;
+    }
+    #insights-page .tool-card h3 {
+        margin-top: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #insights-page .tool-card {
+        transition: none;
+    }
+    #insights-page .tool-card:hover {
+        transform: none;
+    }
+}
