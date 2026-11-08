@@ -1,2 +1,11 @@
-[tool.vercel]
-entrypoint = "backend.main:app"
+[project]
+name = "securepass"
+version = "1.0.0"
+description = "Password Security Analyzer"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]"
+]
+
+[project.scripts]
+app = "backend.main:app"
